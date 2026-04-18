@@ -27,6 +27,12 @@
     .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     body { font-family: 'Cairo', sans-serif; }
     .article-card:hover .article-img { transform: scale(1.05); }
+
+    @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+    @media (max-width: 640px) {
+        #featured-box .relative { aspect-ratio: 4/3 !important; }
+    }
 </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#0e121b] dark:text-gray-100 min-h-screen">
@@ -55,7 +61,6 @@
             </button>
         </div>
     </div>
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 dark:border-slate-800">
         <nav class="flex flex-col px-4 py-2">
             <a class="py-3 text-sm font-medium hover:text-primary border-b border-slate-100 dark:border-slate-800" href="author_portfolio.html">الكتب</a>
@@ -69,10 +74,10 @@
 
 <main class="max-w-[1000px] mx-auto px-4 md:px-6 py-8 md:py-10">
 
-    <!-- Featured Article - Dynamic (latest by date) -->
+    <!-- Featured Article -->
     <section class="mb-12 md:mb-16">
         <div class="group cursor-pointer" id="featured-box" onclick="">
-            <div class="relative overflow-hidden rounded-xl aspect-[21/9] bg-gray-200 mb-6">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 mb-6" style="aspect-ratio:21/9; min-height:200px;">
                 <div class="absolute inset-0 transition-transform duration-500" id="featured-bg"
                      style="background: linear-gradient(135deg, #0f2d5a 0%, #1a4a80 40%, #1754cf 100%); display:flex; align-items:center; justify-content:center;">
                     <div id="featured-bg-text" style="text-align:center; color:white; opacity:0.15; font-size:5rem; font-weight:900; font-family:'Cairo',sans-serif;"></div>
@@ -97,15 +102,15 @@
             </div>
         </div>
     </section>
-        <div class="text-[#4e6797] text-sm font-medium">
-            <span id="articles-count">عرض 4 مقالات</span>
-        </div>
+
+    <div class="text-[#4e6797] text-sm font-medium mb-6">
+        <span id="articles-count">عرض 4 مقالات</span>
     </div>
 
     <!-- Articles Grid -->
     <div class="grid md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-16" id="articles-grid">
 
-        <!-- Article 1: الرؤية - القوى الناعمة -->
+        <!-- Article 1 -->
         <article class="article-card flex flex-col group" data-date="2021-01-13" data-title="القوى الناعمة العُمانية" data-newspaper="جريدة الرؤية" data-url="https://alroya.om/post/275831" data-desc="دراسة معمقة في عناصر القوة الناعمة للشعب العماني عبر التاريخ، من الملاحة البحرية والتجارة إلى القيم والحضارة والانفتاح على الثقافات الأخرى.">
             <a href="https://alroya.om/post/275831" target="_blank" class="block">
                 <div class="aspect-video w-full mb-4 md:mb-6 overflow-hidden rounded-xl bg-gray-100 relative">
@@ -113,7 +118,6 @@
                          style="background: linear-gradient(135deg, #0f2d5a 0%, #1a4a80 100%); display:flex; align-items:center; justify-content:center;">
                         <span style="color:white;opacity:0.12;font-size:4rem;font-weight:900;font-family:'Cairo',sans-serif;">الرؤية</span>
                     </div>
-                    <!-- Newspaper badge -->
                     <div class="absolute top-3 right-3 flex items-center gap-1.5 bg-white/95 rounded-lg px-2.5 py-1 shadow">
                         <div style="width:20px;height:20px;background:#1754cf;border-radius:3px;display:flex;align-items:center;justify-content:center;">
                             <span style="color:white;font-size:9px;font-weight:800;font-family:'Cairo',sans-serif;">ر</span>
@@ -136,7 +140,7 @@
             </a>
         </article>
 
-        <!-- Article 2: الرؤية - الراحل الحارثي -->
+        <!-- Article 2 -->
         <article class="article-card flex flex-col group" data-date="2024-08-18" data-title="الراحل أحمد بن يوسف الحارثي.. مهنية في أداء العمل" data-newspaper="جريدة الرؤية" data-url="https://alroya.om/post/349721" data-desc="تأبين وفاء للدبلوماسي العماني الراحل أحمد بن يوسف الحارثي، وكيل وزارة الخارجية للشؤون الدبلوماسية.">
             <a href="https://alroya.om/post/349721" target="_blank" class="block">
                 <div class="aspect-video w-full mb-4 md:mb-6 overflow-hidden rounded-xl bg-gray-100 relative">
@@ -166,8 +170,8 @@
             </a>
         </article>
 
-        <!-- Article 3: جريدة عمان - حوادث السفن -->
-        <article class="article-card flex flex-col group" data-date="2021-08-16" data-title="حوادث السفن المبحرة في المياه البحرية العمانية والمسؤولية القانونية حولها" data-newspaper="جريدة عمان اليومية" data-url="https://www.omandaily.om/" data-desc="تحليل قانوني معمق لحوادث السفن في المياه البحرية لسلطنة عمان، وإطار المسؤولية القانونية الدولية والوطنية المترتبة عليها.">
+        <!-- Article 3 -->
+        <article class="article-card flex flex-col group" data-date="2021-08-16" data-title="حوادث السفن المبحرة في المياه البحرية العمانية والمسؤولية القانونية حولها" data-newspaper="جريدة عمان اليومية" data-url="https://www.omandaily.om/%D8%A3%D9%81%D9%83%D8%A7%D8%B1-%D9%88%D8%A2%D8%B1%D8%A7%D8%A1/na/%D8%AD%D9%88%D8%A7%D8%AF%D8%AB-%D8%A7%D9%84%D8%B3%D9%81%D9%86-%D8%A7%D9%84%D9%85%D8%A8%D8%AD%D8%B1%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A4%D9%88%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-%D8%AD%D9%88%D9%84%D9%87%D8%A7" data-desc="تحليل قانوني معمق لحوادث السفن في المياه البحرية لسلطنة عمان، وإطار المسؤولية القانونية الدولية والوطنية المترتبة عليها.">
             <a href="https://www.omandaily.om/%D8%A3%D9%81%D9%83%D8%A7%D8%B1-%D9%88%D8%A2%D8%B1%D8%A7%D8%A1/na/%D8%AD%D9%88%D8%A7%D8%AF%D8%AB-%D8%A7%D9%84%D8%B3%D9%81%D9%86-%D8%A7%D9%84%D9%85%D8%A8%D8%AD%D8%B1%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%B3%D8%A4%D9%88%D9%84%D9%8A%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-%D8%AD%D9%88%D9%84%D9%87%D8%A7" target="_blank" class="block">
                 <div class="aspect-video w-full mb-4 md:mb-6 overflow-hidden rounded-xl bg-gray-100 relative">
                     <div class="article-img w-full h-full transition-transform duration-500"
@@ -196,7 +200,7 @@
             </a>
         </article>
 
-        <!-- Article 4: الأهرام - قمة مجلس التعاون -->
+        <!-- Article 4 -->
         <article class="article-card flex flex-col group" data-date="2021-12-14" data-title="قمة مجلس التعاون والموازنة بين منهجين" data-newspaper="الأهرام المصري" data-url="https://gate.ahram.org.eg/daily/News/203967/4/835775/" data-desc="تحليل سياسي لقمة مجلس التعاون الخليجي وطرح التوازن بين منهجين في التعامل مع القضايا الإقليمية والدولية.">
             <a href="https://gate.ahram.org.eg/daily/News/203967/4/835775/%D9%82%D8%B6%D8%A7%D9%8A%D8%A7-%D9%88%D8%A7%D8%B1%D8%A7%D8%A1/%D9%82%D9%85%D8%A9-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86-%D9%88%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B2%D9%86%D8%A9-%D8%A8%D9%8A%D9%86-%D9%85%D9%86%D9%87%D8%AC%D9%8A%D9%86.aspx" target="_blank" class="block">
                 <div class="aspect-video w-full mb-4 md:mb-6 overflow-hidden rounded-xl bg-gray-100 relative">
@@ -266,20 +270,7 @@ function toggleMobileMenu() {
     menu.classList.toggle('hidden');
     icon.textContent = isHidden ? 'close' : 'menu';
 }
-    let count = 0;
-    articles.forEach(article => {
-        const atype = article.getAttribute('data-type');
-        const show = type === 'all' || atype === type;
-        article.style.display = show ? '' : 'none';
-        if (show) { article.style.animation = 'fadeIn 0.3s ease'; count++; }
-    });
-
-    document.getElementById('articles-count').textContent = 'عرض ' + count + (count === 1 ? ' مقال' : ' مقالات');
-
 </script>
-<style>
-@keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
-</style>
 
 <script>
 (function() {
@@ -297,12 +288,10 @@ function toggleMobileMenu() {
     const desc = latest.getAttribute('data-desc');
     const date = latest.getAttribute('data-date');
 
-    // Format date
     const d = new Date(date);
     const months = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
     const formatted = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
 
-    // Update DOM
     document.getElementById('featured-title').textContent = title;
     document.getElementById('featured-desc').textContent = desc;
     document.getElementById('featured-newspaper').textContent = newspaper;
@@ -311,7 +300,6 @@ function toggleMobileMenu() {
     document.getElementById('featured-badge-letter').textContent = newspaper.charAt(newspaper.length - 1);
     document.getElementById('featured-bg-text').textContent = newspaper;
 
-    // Color based on newspaper
     const colors = {
         'جريدة الرؤية': '#1754cf',
         'جريدة عمان اليومية': '#c0392b',
@@ -321,9 +309,9 @@ function toggleMobileMenu() {
     document.getElementById('featured-badge-icon').style.background = color;
     document.getElementById('featured-bg').style.background = `linear-gradient(135deg, ${color}cc 0%, ${color} 100%)`;
 
-    // Click handler
     document.getElementById('featured-box').onclick = () => window.open(url, '_blank');
 })();
 </script>
+
 </body>
 </html>
