@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="light" lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>عن المؤلف | موسوعة عمان وقانون البحار</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {"primary": "#1754cf","background-light": "#f6f6f8","background-dark": "#111621"},
+                fontFamily: {"display": ["Cairo","sans-serif"]},
+                borderRadius: {"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    body { font-family: 'Cairo', sans-serif; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 flex items-center justify-between h-16">
+        <div class="flex items-center gap-4 md:gap-8">
+            <div class="flex items-center gap-2">
+                <div class="size-5 text-primary flex-shrink-0">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+                </div>
+               <a href="index.html"><h2 class="text-base md:text-xl font-bold tracking-tight hover:text-primary transition-colors cursor-pointer">موسوعة عمان وقانون البحار</h2></a>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="author_portfolio.html">الكتب</a>
+                <a class="text-sm font-semibold text-primary border-b-2 border-primary pb-1" href="about.html">عن المؤلف</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="">المقابلات</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="articles.html">المقالات</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">المحاضرات</a>
+            </nav>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <span id="menu-icon" class="material-symbols-outlined text-slate-600" style="font-size:22px">menu</span>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 dark:border-slate-800">
+        <nav class="flex flex-col px-4 py-2">
+            <a class="py-3 text-sm font-medium border-b border-slate-100" href="author_portfolio.html">الكتب</a>
+            <a class="py-3 text-sm font-semibold text-primary border-b border-slate-100" href="about.html">عن المؤلف</a>
+            <a class="py-3 text-sm font-medium border-b border-slate-100" href="#">المقابلات</a>
+            <a class="py-3 text-sm font-medium border-b border-slate-100" href="articles.html">المقالات</a>
+            <a class="py-3 text-sm font-medium" href="#">المحاضرات</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-[900px] mx-auto px-4 md:px-6 lg:px-10 py-10 md:py-16">
+
+    <!-- Hero: Photo + Name -->
+    <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start mb-12 md:mb-16">
+        <!-- Photo -->
+        <div class="flex-shrink-0">
+            <div class="w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-700">
+                <img src="dr_ali.png" alt="الدكتور علي بن أحمد العيساني" class="w-full h-full object-cover object-top"/>
+            </div>
+        </div>
+        <!-- Name + title + tags -->
+        <div class="flex-1 text-center md:text-right">
+            <p class="text-primary font-bold text-sm mb-2 tracking-wide">موسوعة عمان وقانون البحار</p>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-3 leading-tight">الدكتور علي بن أحمد العيساني</h1>
+            <p class="text-slate-500 dark:text-slate-400 text-base md:text-lg mb-6">دبلوماسي عُماني ومتخصص في القانون الدولي للبحار</p>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                <span class="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold">قانون البحار الدولي</span>
+                <span class="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold">الدبلوماسية البحرية</span>
+                <span class="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold">المجالات البحرية العمانية</span>
+                <span class="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold">اتفاقية UNCLOS 1982</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio quote from back cover -->
+    <div class="bg-primary/5 border-r-4 border-primary rounded-xl p-6 mb-10 md:mb-14">
+        <p class="text-slate-700 dark:text-slate-300 leading-loose text-sm md:text-base font-medium">
+            "إنّ السيّادة مفهوم يتعلق بالمجالات البحرية بنفس أهمية تعلّقه بالإقليم البرّي للدولة الوطنية. وسيّادة الدولة على البحر لا تتنازعها فقط تقسيمات تلك المجالات البحرية، وإنما تتنازعها أحياناً دول فيما بينها وأحياناً دول مع منظمات دولية."
+        </p>
+    </div>
+
+    <!-- Bio sections -->
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+
+        <!-- الدراسات -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary" style="font-size:20px">school</span>
+                </div>
+                <h2 class="text-lg font-bold">الدراسات العلمية</h2>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>تنوّعت بين العلوم السياسية والقانون الدولي للبحار والاقتصاد والدبلوماسية</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>جامعة الإمارات بالعين، جامعة الملك سعود بالرياض، جامعة أكسفورد بالمملكة المتحدة</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>جامعة المنار بتونس — دكتوراه بعنوان: "عمان وقانون البحار، دراسة لمجالاتها البحرية"</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>المعهد الألماني لدراسات التنمية ببرلين، كلية الدفاع بوزارة الدفاع الأمريكية بواشنطن</span></li>
+            </ul>
+        </div>
+
+        <!-- الحياة العملية -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary" style="font-size:20px">work</span>
+                </div>
+                <h2 class="text-lg font-bold">الحياة العملية</h2>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>عمل بالسلك الدبلوماسي العماني وتنقّل بين عدة سفارات وترقّى في المناصب</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>تولّى رئاسة دائرة الوزير ووكيل وزارة الخارجية للشؤون الدبلوماسية</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>سفير لسلطنة عمان لدى: تونس، ومصر، وليبيا، والمندوب الدائم لدى جامعة الدول العربية</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>عضو بمجلس الدولة بسلطنة عمان</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>رئيساً للهيئة الاستشارية للمجلس الأعلى لمجلس التعاون</span></li>
+            </ul>
+        </div>
+
+        <!-- التدريس والمحاضرات -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary" style="font-size:20px">cast_for_education</span>
+                </div>
+                <h2 class="text-lg font-bold">العمل الأكاديمي</h2>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>حاضر في المعهد الدبلوماسي العماني</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>كلية الدفاع الوطني وكلية القيادة والأركان بسلطنة عمان</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>أكاديمية السلطان قابوس لعلوم الشرطة</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>المعهد المصري للشؤون الخارجية، جامعة السلطان قابوس، جامعة صحار</span></li>
+            </ul>
+        </div>
+
+        <!-- المنشورات -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary" style="font-size:20px">menu_book</span>
+                </div>
+                <h2 class="text-lg font-bold">المنشورات والكتب</h2>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>موسوعة عمان وقانون البحار — 6 كتب متخصصة</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>مقالات في جريدة الرؤية العمانية وجريدة عمان اليومية والأهرام المصري</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>ISBN: 978-99969-4-213-6</span></li>
+                <li class="flex gap-2"><span class="text-primary mt-1">◈</span><span>الطبعة الثانية 2024 — الطبعة الأولى 2019</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="mt-10 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+            <div class="size-5 text-slate-400">
+                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+            </div>
+            <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest">© 2026 موسوعة عمان وقانون البحار</p>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    menu.classList.toggle('hidden');
+    icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+}
+</script>
+</body>
+</html>
